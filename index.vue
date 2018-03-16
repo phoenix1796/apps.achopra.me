@@ -3,7 +3,7 @@
 
 <div class="page container">
     <div class="title">Welcome to {{Header}}</div>
-    <div class="subtitle">How are you ?</div>
+    <!-- <div class="subtitle">How are you ?</div> -->
     <div class="projectList">
         <!-- eslint-disable-next-line -->
         <project v-for="project in projAry"
@@ -27,12 +27,13 @@
         font-weight: bold;
         font-size: xx-large;
         margin:1.5vmax 0;
-        color:#f0ffff;
+        color:#f0ffff;  
     }
     .projectList{
-        display:flex;
-        justify-content: center space-around;
-        flex-wrap: wrap;
+        display:grid;
+        grid-gap: 1vmax;
+        grid-template-columns: repeat(auto-fill, minmax(20em,1fr));
+        text-align: justify;
     }
 </style>
 
@@ -68,8 +69,16 @@ export default Vue.extend({
         project: project
     },
     data:()=>({
-        Header: "Apps.achopra.me",
-        projAry:projAry
-    })
+        projAry:[],
+        Header: "Apps.achopra.me"
+    }),
+    mounted(){      
+        fetch("https://jsonplaceholder.typicode.com/posts/1 ")
+        .then(response=>response.json())
+        .then(data=>{   
+            console.log(data)
+            this.projAry = [{title:"ASD",desc:JSON.stringify(data)}]
+        })
+    }
 })
 </script>

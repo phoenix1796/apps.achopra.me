@@ -16,7 +16,7 @@
     max-width: 75%;
     min-width: 50%;
 }
-.project{
+/* .project{
     margin:1vmax 1vmax;
 }
 .project:hover {
@@ -30,7 +30,6 @@
 @media (min-width: 768px){
     .project{
         width: 45%;
-        /* margin:1vmax auto; */
     }
 }
 @media (min-width: 992px){
@@ -39,9 +38,8 @@
     }
     .project{
         width: 25%;
-        /* margin:1vmax 1vmax; */
-    }
-}
+        }
+} */
 </style>
 
 <script type="ts">
