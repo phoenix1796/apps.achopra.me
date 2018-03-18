@@ -46,7 +46,7 @@ let projAry = [
      desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_"
     },
     {title:"**Proj#2*_*",
-     desc:"***lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
+     desc:"***lorem ispsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
     }
 ]
 export default Vue.extend({
