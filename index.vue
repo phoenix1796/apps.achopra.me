@@ -62,7 +62,7 @@ export default Vue.extend({
         .then((response)=>response.json())
         .then(data=>{
             console.log(data)
-            this.projAry = projAry
+            this.projAry = data
         })
     }
 })
