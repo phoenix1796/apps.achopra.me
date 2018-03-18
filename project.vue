@@ -1,11 +1,9 @@
 <template>
     <div class="project card" href="www.google.com">
-        <div class="card-header">
-            {{title}}
+        <div class="card-header" v-html="titleMd">
         </div>
         <img :src="'http://achopra.me/myApps/'+pic" :alt="title" class="card-img-top">
-        <div class="card-body project-description">
-            {{desc}}
+        <div class="card-body project-description" v-html="descMd">
         </div>
         <a class="projBtn btn btn-primary">Visit</a>
     </div>
@@ -17,35 +15,23 @@
     max-width: 75%;
     min-width: 50%;
 }
-/* .project{
-    margin:1vmax 1vmax;
+.card-header{
+    text-align: center;
 }
-.project:hover {
-    transform: translate(10%,10%,0);
-}
-@media (min-width: 600px) {
-    .project{
-        width:95%;
-    }
-}
-@media (min-width: 768px){
-    .project{
-        width: 45%;
-    }
-}
-@media (min-width: 992px){
-    .projBtn{
-        margin: 0.5vmax auto;
-    }
-    .project{
-        width: 25%;
-        }
-} */
 </style>
 
 <script type="ts">
 import Vue from 'vue'
+var marked = require('marked');
 export default Vue.extend({
+    computed: {
+        descMd: function () {
+            return marked(this.desc, { sanitize: true })
+        },
+        titleMd: function () {
+            return marked(this.title, { sanitize: true })
+        }
+    },
     props:['title','desc','pic']
 })
 </script>

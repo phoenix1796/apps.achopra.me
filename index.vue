@@ -42,28 +42,12 @@
 import Vue from 'vue'
 import project from "./project"
 let projAry = [
-    {title:"Proj#1",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+    {title:"_Proj#1_",
+     desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_"
     },
     {title:"Proj#2",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-    },
-    {title:"Proj#3",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-    },
-    {title:"Proj#4",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-    },
-
-    {title:"Proj#5",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-    },
-    {title:"Proj#6",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-    },
-    {title:"Proj#8",
-     desc:"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
-    },
+     desc:"***lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
+    }
 ]
 export default Vue.extend({
     components:{
@@ -78,7 +62,7 @@ export default Vue.extend({
         .then((response)=>response.json())
         .then(data=>{
             console.log(data)
-            this.projAry = data
+            this.projAry = projAry
         })
     }
 })
