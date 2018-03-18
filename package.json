@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vue build index.vue && mv dist docs"
+    "build":"sh build.sh"
   },
   "repository": {
     "type": "git",
