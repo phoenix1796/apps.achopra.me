@@ -45,7 +45,7 @@ let projAry = [
     {title:"_Proj#1_",
      desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_"
     },
-    {title:"*Proj#2*",
+    {title:"**Proj#2**",
      desc:"***lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
     }
 ]
