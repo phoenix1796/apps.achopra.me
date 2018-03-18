@@ -1,2 +1,0 @@
-webpackJsonp([1],{0:function(e,n,t){e.exports=t("sR30")},FGdg:function(e,n,t){"use strict";var r={data:function(){return{greeting:"How are you ?"}}},u=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[e._v(e._s(e.greeting))])},a=[],c=t("9flA"),i=!1,l=null,o=null,s=null,f=Object(c["a"])(r,u,a,i,l,o,s);n["a"]=f.exports}},[0]);
-//# sourceMappingURL=app.aaa315c5.js.map

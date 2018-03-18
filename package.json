@@ -1,0 +1,24 @@
+{
+  "name": "apps.achopra.me",
+  "version": "1.0.0",
+  "description": "My applications",
+  "main": "index.vue",
+  "dependencies": {
+    "marked": "^0.3.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vue build index.vue && mv dist docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phoenix1796/apps.achopra.me.git"
+  },
+  "author": "phoenix1796",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/phoenix1796/apps.achopra.me/issues"
+  },
+  "homepage": "https://github.com/phoenix1796/apps.achopra.me#readme"
+}
