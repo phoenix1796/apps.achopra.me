@@ -2,7 +2,7 @@
 <template>
 
 <div class="page container">
-    <div class="title">Welcome to testing#1 {{Header}}</div>
+    <div class="title">Welcome to testing#2 {{Header}}</div>
     <!-- <div class="subtitle">How are you ?</div> -->
     <div class="projectList">
         <!-- eslint-disable-next-line -->
