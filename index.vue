@@ -10,6 +10,7 @@
             :key="project.title"
             :title="project.title"
             :desc="project.desc"
+            :pic="project.pic"
         ></project>
     </div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,7 +20,7 @@
 
 <style>
     body{
-        background-image: url('./bg.jpg');
+        background-color: #f7f7fa;
         background-size: cover;
     }
     .title{
@@ -27,7 +28,7 @@
         font-weight: bold;
         font-size: xx-large;
         margin:1.5vmax 0;
-        color:#f0ffff;  
+        color:#0f0f0f;  
     }
     .projectList{
         display:grid;
@@ -69,15 +70,15 @@ export default Vue.extend({
         project: project
     },
     data:()=>({
-        projAry:[],
+        projAry:projAry,
         Header: "Apps.achopra.me"
     }),
-    mounted(){      
-        fetch("https://jsonplaceholder.typicode.com/posts/1 ")
-        .then(response=>response.json())
-        .then(data=>{   
+    mounted(){
+        fetch("http://achopra.me/myApps/api.json")
+        .then((response)=>response.json())
+        .then(data=>{
             console.log(data)
-            this.projAry = [{title:"ASD",desc:JSON.stringify(data)}]
+            this.projAry = data
         })
     }
 })

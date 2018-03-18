@@ -3,6 +3,7 @@
         <div class="card-header">
             {{title}}
         </div>
+        <img :src="'http://achopra.me/myApps/'+pic" :alt="title" class="card-img-top">
         <div class="card-body project-description">
             {{desc}}
         </div>
@@ -45,6 +46,6 @@
 <script type="ts">
 import Vue from 'vue'
 export default Vue.extend({
-    props:['title','desc']
+    props:['title','desc','pic']
 })
 </script>
