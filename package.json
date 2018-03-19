@@ -4,12 +4,13 @@
   "description": "My applications",
   "main": "index.vue",
   "dependencies": {
-    "marked": "^0.3.17"
+    "marked": "^0.3.17",
+    "vue-images-loaded": "^1.1.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"sh build.sh"
+    "build": "sh build.sh"
   },
   "repository": {
     "type": "git",

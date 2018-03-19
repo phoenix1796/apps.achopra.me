@@ -1,16 +1,16 @@
-
 <template>
-
 <div class="page container">
+    <loader v-if="loading"/>
     <div class="title">Welcome to {{Header}}</div>
     <!-- <div class="subtitle">How are you ?</div> -->
-    <div class="projectList">
+    <div class="projectList" v-images-loaded="imagesLoaded">
         <!-- eslint-disable-next-line -->
         <project v-for="project in projAry"
             :key="project.title"
             :title="project.title"
             :desc="project.desc"
             :pic="project.pic"
+            :link="project.link"
         ></project>
     </div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -40,7 +40,9 @@
 
 <script type="ts">
 import Vue from 'vue'
+import imagesLoaded from 'vue-images-loaded'
 import project from "./project"
+import loader from "./loader"
 let projAry = [
     {title:"_Proj#1_",
      desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_"
@@ -50,20 +52,29 @@ let projAry = [
     }
 ]
 export default Vue.extend({
+    directives: {
+          imagesLoaded
+    },
     components:{
-        project: project
+        project: project,
+        loader: loader
     },
     data:()=>({
-        projAry:projAry,
+        loading: true,
+        projAry:[],
         Header: "Apps.achopra.me"
     }),
     mounted(){
         fetch("http://achopra.me/myApps/api.json")
         .then((response)=>response.json())
         .then(data=>{
-            console.log(data)
-            this.projAry = data
+            this.projAry = data;
         })
+    },
+    methods: {
+        imagesLoaded() {
+            this.loading=false;            
+        }
     }
 })
 </script>
