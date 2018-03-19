@@ -31,14 +31,14 @@
         display: block;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        background: url("./img/cube_mobi.gif") no-repeat;
+        background: url("img/cube_mobi.gif") no-repeat;
         width: 32px; /* Width of new image */
         height: 32px; /* Height of new image */
         padding-left: 32px; /* Equal to width of new image */
     }
     @media (min-width:768px){
         .banner{
-            background: url("./img/cube.gif") no-repeat;
+            background: url("img/cube.gif") no-repeat;
             width: 128px; /* Width of new image */
             height: 128px; /* Height of new image */
             padding-left: 128px; /* Equal to width of new image */
