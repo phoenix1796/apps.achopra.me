@@ -43,6 +43,7 @@
         }
     }
 </style>
+
 <script type="ts">
 import Vue from 'vue'
 import imagesLoaded from 'vue-images-loaded'
