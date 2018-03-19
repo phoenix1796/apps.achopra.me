@@ -1,5 +1,5 @@
 <template>
-<div class="page container">
+<div id="container" class="page container">
     <loader v-if="loading"/>
     <div class="title">Welcome to {{Header}}</div>
     <!-- <div class="subtitle">How are you ?</div> -->
@@ -36,6 +36,12 @@
         grid-template-columns: repeat(auto-fill, minmax(20em,1fr));
         text-align: justify;
     }
+    @media (max-width: 600px){
+        #container{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
 </style>
 
 <script type="ts">
@@ -45,7 +51,9 @@ import project from "./project"
 import loader from "./loader"
 let projAry = [
     {title:"_Proj#1_",
-     desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_"
+     desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_",
+     pic:"asd/asd.png",
+     link:"http://asd.casd"
     },
     {title:"**Proj#2*_*",
      desc:"***lorem ispsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
