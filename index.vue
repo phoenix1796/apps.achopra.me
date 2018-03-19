@@ -49,6 +49,7 @@ import Vue from 'vue'
 import imagesLoaded from 'vue-images-loaded'
 import project from "./project"
 import loader from "./loader"
+// eslint-disable-next-line
 let projAry = [
     {title:"_Proj#1_",
      desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_",
