@@ -1,7 +1,7 @@
 <template>
     <transition name="fade">
         <div class="load-overlay">
-            <img src="//not/asd" class="banner loader">
+            <img src="http://achopra.me/myApps/misc/transparent.gif" class="banner loader">
         </div>
     </transition>
 </template>

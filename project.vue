@@ -4,7 +4,7 @@
         </div>
         <img :src="'http://achopra.me/myApps/'+pic" :alt="title" class="card-img-top">
         <a target="_blank" :href="repoLink" v-if="typeof repoLink !== undefined">
-            <img src="//not/asd" class="github-ribbon">
+            <img src="http://achopra.me/myApps/misc/transparent.gif" class="github-ribbon">
         </a>
         <div class="card-body project-description" v-html="descMd">
         </div>
