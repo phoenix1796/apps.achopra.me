@@ -8,5 +8,5 @@ sed -i 's/\/css/css/g' docs/index.html
 sed -i 's/\/img/..\/img/g' docs/css/*.css
 #Change title of the App
 sed -i "s/Vue CLI App/AC\'s Apps/g" docs/index.html
-git add -A
+git add docs
 exit
