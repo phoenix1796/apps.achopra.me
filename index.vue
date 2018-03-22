@@ -57,7 +57,7 @@ let projAry = [
      link:"http://asd.casd"
     },
     {title:"**Proj#2*_*",
-     desc:"***lorem ispsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
+     desc:"***lorem ispsum \r\n lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
     }
 ]
 export default Vue.extend({
@@ -78,6 +78,7 @@ export default Vue.extend({
         .then((response)=>response.json())
         .then(data=>{
             this.projAry = data;
+            this.projAry.push(projAry[1])
         })
     },
     methods: {

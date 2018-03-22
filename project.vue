@@ -30,7 +30,7 @@ export default Vue.extend({
 
     computed: {
         descMd: function () {
-            return marked(this.desc, { sanitize: true })
+            return marked(this.desc, { sanitize: true ,breaks: true})
         },
         titleMd: function () {
             return marked(this.title, { sanitize: true })
