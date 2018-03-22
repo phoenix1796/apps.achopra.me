@@ -4,7 +4,7 @@
         </div>
         <img :src="'http://achopra.me/myApps/'+pic" :alt="title" class="card-img-top">
         <a target="_blank" :href="repoLink" v-if="typeof repoLink !== undefined">
-            <img src="./img/github-corner-right.svg" class="github-ribbon" alt="github-ribbon">
+            <img src="//not/asd" class="github-ribbon">
         </a>
         <div class="card-body project-description" v-html="descMd">
         </div>
@@ -14,11 +14,15 @@
 
 <style>
 .github-ribbon{
+    background: url("img/github-corner-right.svg") no-repeat;
     position: absolute;
     right:0;
     top:0;
     user-select: none;
     -webkit-user-drag: none;
+    width:80px;
+    height:80px;
+    padding-left: 80px;
 }
 .project-description > *::first-line{
     text-align: center;
