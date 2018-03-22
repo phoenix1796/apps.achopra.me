@@ -3,7 +3,9 @@
         <div class="card-header" v-html="titleMd">
         </div>
         <img :src="'http://achopra.me/myApps/'+pic" :alt="title" class="card-img-top">
-        <a v-if="repoLink" :href="repoLink"><img src="./img/github-corner-right.svg" class="github-ribbon" alt=""></a>
+        <a target="_blank" :href="repoLink" v-if="typeof repoLink !== undefined">
+            <img src="./img/github-corner-right.svg" class="github-ribbon" alt="github-ribbon">
+        </a>
         <div class="card-body project-description" v-html="descMd">
         </div>
         <a class="projBtn btn btn-primary" :href="link">Visit</a>
@@ -15,6 +17,8 @@
     position: absolute;
     right:0;
     top:0;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 .project-description > *::first-line{
     text-align: center;
