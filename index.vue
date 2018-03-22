@@ -57,7 +57,8 @@ let projAry = [
      link:"http://asd.casd"
     },
     {title:"**Proj#2*_*",
-     desc:"***lorem ispsum \r\n lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum***"
+    desc:"##### __ Library for my applications __ \n #### Using [Github pages](http://achopra.me/myApps/api.json) as an Api to back this SPA. \n ___\n  *** custom Nginx setup on VPS ***  \n *** Git based deployment *** (using github repos) \n___ \n * Tech used : \n\t * Vue2.0 \n\t * NGINX \n\t * Linux Shell scripting \n\t * Bootstrap(v4) ",
+
     }
 ]
 export default Vue.extend({
