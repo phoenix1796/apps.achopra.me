@@ -1,5 +1,5 @@
 <template>
-    <div class="project card" href="www.google.com">
+    <div class="project card">
         <div class="card-header" v-html="titleMd">
         </div>
         <img :src="'http://achopra.me/myApps/'+pic" :alt="title" class="card-img-top">

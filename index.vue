@@ -1,5 +1,6 @@
 <template>
 <div id="container" class="page container">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <loader v-if="loading"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <div v-show="!loading">
@@ -40,6 +41,12 @@
         text-align: justify;
     }
     @media (max-width: 600px){
+        .projectList{
+            grid-template-columns: 1fr;
+        }
+        .projectList > * {
+            margin-bottom:3vmin;
+        }
         #container{
             padding-left: 0px;
             padding-right: 0px;
@@ -53,17 +60,15 @@ import imagesLoaded from 'vue-images-loaded'
 import project from "./project"
 import loader from "./loader"
 // eslint-disable-next-line
-let projAry = [
-    {title:"_Proj#1_",
-     desc:"_lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum_",
-     pic:"asd/asd.png",
-     link:"http://asd.casd"
-    },
-    {title:"**Proj#2*_*",
-    desc:"##### __ Library for my applications __ \n #### Using [Github pages](http://achopra.me/myApps/api.json) as an Api to back this SPA. \n ___\n  *** custom Nginx setup on VPS ***  \n *** Git based deployment *** (using github repos) \n___ \n * Tech used : \n\t * Vue2.0 \n\t * NGINX \n\t * Linux Shell scripting \n\t * Bootstrap(v4) ",
-
-    }
-]
+// let projAry = [
+//     {title:"_Proj#1_",
+//      desc:"_lorem ipsum",
+//      pic:"asd/asd.png",
+//      link:"http://asd.casd"
+//     },
+//     {title:"**Proj#2*_*"
+//     }
+// ]
 export default Vue.extend({
     directives: {
           imagesLoaded
