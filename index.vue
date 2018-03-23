@@ -1,20 +1,22 @@
 <template>
 <div id="container" class="page container">
     <loader v-if="loading"/>
-    <div class="title">Welcome to {{Header}}</div>
-    <!-- <div class="subtitle">How are you ?</div> -->
-    <div class="projectList" v-images-loaded="imagesLoaded">
-        <!-- eslint-disable-next-line -->
-        <project v-for="project in projAry"
-            :key="project.title"
-            :title="project.title"
-            :desc="project.desc"
-            :pic="project.pic"
-            :link="project.link"
-            :repoLink="project.repoLink"
-        ></project>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <div v-show="!loading">
+        <div class="title">Welcome to {{Header}}</div>
+        <!-- <div class="subtitle">How are you ?</div> -->
+        <div class="projectList" v-images-loaded="imagesLoaded">
+            <!-- eslint-disable-next-line -->
+            <project v-for="project in projAry"
+                :key="project.title"
+                :title="project.title"
+                :desc="project.desc"
+                :pic="project.pic"
+                :link="project.link"
+                :repoLink="project.repoLink"
+            ></project>
+        </div>
     </div>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </div>
 
 </template>
@@ -85,7 +87,8 @@ export default Vue.extend({
     },
     methods: {
         imagesLoaded() {
-            this.loading=false;            
+            this.loading=false;
+            console.log("Images loaded", this.l)            
         }
     }
 })
